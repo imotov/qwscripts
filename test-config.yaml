@@ -19,6 +19,10 @@ doc_mapping:
       record: position
     - name: weight
       type: f64
+      fast: true
+    - name: host_ip
+      type: ip
+      fast: true
     - name: timestamp
       type: datetime
       fast: true
