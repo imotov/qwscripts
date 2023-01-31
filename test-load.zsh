@@ -11,7 +11,7 @@ else
     echo "Using docker"
     mkdir -p $SCRIPT_DIR/qwdata
     DATA_PATH=/quickwit
-    QW_CMD=(docker run --rm \
+    QW_CMD=(docker run --rm --platform linux/amd64 \
         -p 127.0.0.1:7280:7280 \
         -v $SCRIPT_DIR/qwdata:/quickwit/qwdata \
         -v $SCRIPT_DIR/test-data.json:/quickwit/test-data.json \
